@@ -1,0 +1,187 @@
+*:focus {
+    outline: none;
+}
+
+body {
+    background: url('../images/notfound.gif') center center no-repeat #fff;
+}
+
+html, body, #map {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+a, button, h1, h2, h3, h4, h5, h6, input, ol, p, textarea, th, ul {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font: inherit;
+    list-style: none;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+#overview-map,
+.location {
+    position: absolute;
+	z-index: 10;
+}
+
+#overview-map {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    bottom: 20px;
+    left: 20px;
+    border: 3px solid #fff;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+       -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.location {
+	bottom: 20px; // was 45
+    left: 135px;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	text-shadow: 0 0 1px rgba(0,0,0,0.6), 1px 1px 2px rgba(0,0,0,0.35);
+}
+
+.location-extent {
+	bottom: 20px;
+	font-weight: normal;
+}
+
+#overview-map .esri-leaflet-logo.leaflet-control {
+    display: none;
+}
+
+label {
+    font-size: 18px;
+}
+
+#overview-map {
+    display: none;
+}
+
+.leaflet-bottom {
+	z-index: 9999999 !important;
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+.leaflet-container .leaflet-control-attribution {
+	font-size: 11px;
+    float: right;
+    color: #fff;
+    background: transparent !important;
+    margin: 0;
+    padding: 7px 20px;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.leaflet-container .leaflet-control-attribution a {
+	color: #fff;
+}
+
+.leaflet-container .leaflet-control-scale {
+    font-size: 11px;
+    float: right;
+    color: rgba(255, 255, 255, 0.61);
+    background: rgba(0, 0, 0, 0.65)!important;
+    margin: 0;
+    padding: 2px 7px;
+}
+.location.location-name {
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 4px 9px;
+    font-weight: 100;
+    letter-spacing: .5;
+}
+.location.location-extent {
+    bottom: 15px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 4px 9px;
+    font-weight: 100;
+}
+.location {
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6), 1px 1px 2px rgba(0,0,0,0.35);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*overview map styling*/
+
+#overview{
+    width: 150px;
+    height: 150px;
+    z-index: 999999999;
+    position: absolute;
+    bottom: 38px;
+    right: 25px;
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.stroke {
+	fill: none;
+	stroke: #000;
+	stroke-width: 3px;
+}
+
+.fill {
+	fill: rgb(235, 232, 232);
+}
+
+.graticule {
+	fill: none;
+	stroke: #777;
+	stroke-width: .5px;
+	stroke-opacity: .5;
+	display: none
+}
+
+.land {
+	fill: #222;
+}
+
+.boundary {
+	display: none;
+	fill: none;
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+.marker{
+	fill: orange;
+	stroke: red;
+}
+
+#marker-pin{
+	border-radius: 100%;
+	width: 14px;
+	height:14px;
+	position: absolute;
+	right:70px;
+	bottom:70px;
+	background-color: #4C8BF5;
+	opacity: 1;
+}

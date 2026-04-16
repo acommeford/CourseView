@@ -1,0 +1,78 @@
+<html lang="en">
+	<head>
+		<title>New Tab</title>
+		<meta charset="UTF-8">
+		<meta content="" name="description">
+		<meta content="" name="author">
+		<meta content="3 days" name="revisit-after">
+
+		<link rel="stylesheet" type="text/css" href="styles/common.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+
+		<script src="scripts/lib/jquery-3.1.1/jquery.js"></script>
+
+		<!-- Load Leaflet from CDN-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
+		<script src="scripts/lib/leaflet-1.1.0/leaflet-src.js"></script>
+
+		<!-- Load Esri Leaflet from CDN -->
+		<script src="scripts/lib/esri-leaflet-2.0.8/esri-leaflet-debug.js"></script>
+
+		<!-- Toast -->
+		<script src="scripts/lib/toastr.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/toast.css"/>
+
+		<script src="scripts/lib/d3/d3.v3.min.js"></script>
+		<script src="scripts/lib/d3/topojson.v1.min.js"></script>
+      
+	</head>
+	<body>
+
+		<div id="map-viewer">Open in Esri</div>
+
+		<div id="map-reporter">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+				<path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z" fill="rgba(255,255,255,1)"/>
+			</svg>
+			<span>Report issues</span>
+		</div>
+
+		<div id="omnibox-container">
+
+			<div class="section-layout section-cardbox searchbox-shadow">
+				<h1 style="font-weight:bold;font-size:16px;">Share this location</h1>
+				<div class="searchbox">
+					
+					<form id="details-form">
+						<div class="gstl_50 sbib_a">
+							<div class="sbib_b" id="sb_ifc50" dir="ltr">
+								<div id="gs_lc50" style="position: relative;">
+									<input type="text" value="" readonly name="placeName" id="location" name="q" autofocus="autofocus" value="" placeholder="Enter location name (e.g. 'London Bridge')" autocomplete="off" class="tactile-searchbox-input">
+									<input type="button" id="searchbox-searchclear" class="searchbox-searchclear" style="position: absolute; right: -24px; top: -3px; z-index: 12;"/>
+								</div>
+							</div>
+						</div>
+						<div class="searchbox-searchbutton-container">
+							<button type="Submit" id="searchbox-searchbutton" class="searchbox-searchbutton"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	  
+		<div id="map"></div>
+
+		<div id ="overview">
+			<div id="marker-pin"></div>
+		</div>
+
+		<div id="name" class="location location-name"></div>
+
+		<script src="scripts/country-codes.js"></script>
+		<script src="scripts/global.js"></script>
+		<script src="scripts/overviewmap.js"></script>	
+
+	</body>
+
+</html>
