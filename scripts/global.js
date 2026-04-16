@@ -3,7 +3,7 @@ var currentLocation			= "";
 var masterServiceEndpoint	= "https://services.arcgis.com/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/WorldviewMaster/FeatureServer/0";
 var editableServiceEndpoint	= 'https://services.arcgis.com/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/WorldviewEditable/FeatureServer/0';
 var reportServiceEndpoint	= 'https://services.arcgis.com/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/WorldviewReported/FeatureServer/0';
-var serviceQuery			= "Status='Approved' AND Location_Name LIKE '%Canada%'";
+var serviceQuery			= "Status='Approved'";
 var existing;
 
 var loadedObj;
@@ -24,7 +24,7 @@ function makeRequest(method, url, async, readyStateHandler) {
 
 function init() {
 	var query = "/query?geometryType=esriGeometryPoint&spatialRel=esriSpatialRelIntersects&units=esriSRUnit_Meter&outFields=*&outSR=4326&returnGeometry=true&f=json";
-	var where = "&where=" + serviceQuery;
+	var where = "&where= Location_Name LIKE '%Canada%'" + serviceQuery;
 
 	var requestUrl = masterServiceEndpoint + query + where;
 	
