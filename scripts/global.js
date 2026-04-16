@@ -3,7 +3,7 @@ var currentLocation			= "";
 var masterServiceEndpoint	= "https://services.arcgis.com/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/WorldviewMaster/FeatureServer/0";
 var editableServiceEndpoint	= 'https://services.arcgis.com/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/WorldviewEditable/FeatureServer/0';
 var reportServiceEndpoint	= 'https://services.arcgis.com/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/WorldviewReported/FeatureServer/0';
-var serviceQuery			= "Status='Approved'";
+var serviceQuery			= "Status='Approved' AND Location_Name LIKE '%Canada%'";
 var existing;
 
 var loadedObj;
